@@ -20,9 +20,9 @@
 <body>
 
     <div class="container">
-        <form action="insert.php" method="POST" class="form  ">
+        <form action="insert.php" method="POST" class="form border " enctype="multipart/form-data">
             <h2>موقع تسويقي اونلاين</h2>
-            <img src="images/online-shopping-logo-design-template-digital-shopping-logo-mouse-cursor-cart-concepts_502185-286.avif" alt="logo" class="img-fluid">
+            <img src="images/images.jpg" alt="logo" class="img-fluid">
             <input type="text" name="name" class="form-control" placeholder="ادخل اسم المنتج">
             <input type="text" name="price" class="form-control" placeholder="ادخل سعر المنتج">
             <input type="file" name="image" class="form-control">   
