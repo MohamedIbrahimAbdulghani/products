@@ -3,13 +3,15 @@ body {
     padding: 0;
     font-family: 'Cairo', sans-serif;
     font-weight: bold;
-    background-color: #a7a1a1;
+    background-color: #ece9e9;
 }
+/* index page */
 .form {
     padding: 20px;
     margin-top: 15px !important;
     width: 75%;
     margin: auto;
+    border: 1px solid #a9a9a9 !important;
 }
 .form h2 {
     text-align: center;
@@ -49,4 +51,20 @@ footer {
     margin-bottom: 0px;
     margin-top: 28px;
     padding: 6px;
+}
+/* products page */
+h2 {
+    text-align: center;
+    font-weight: bold;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.card {
+    display: inline-block;
+    margin-bottom: 5px;
+}
+.card img {
+    margin-top: 5px;
+    width: 250px;
+    height: 170px !important;
 }
