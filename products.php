@@ -25,25 +25,21 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    
         <center>
-        <?php if(!empty($result)): ?>
-            <h2>جميع المنتجات المتوفرة</h2>
-            <?php foreach($result as $res): ?>
-                <div class="card" style="width: 18rem;" >
-                    <img class="card-img-top" src="<?php echo "images/" .$res["product_image"] ?>" alt="Card image cap" class="img-fluid">
-                    <div class="card-body">
-                        <h5 class="card-title">Name Is : <?php echo $res['product_name'] ?></h5>
-                        <p class="card-text">Price Is : <?php echo $res["product_price"] ?></p>
-                        <a href="#" class="btn btn-danger">حذف منتج</a>
-                        <a href="#" class="btn btn-primary">تعديل منتج</a>
+            <?php if(!empty($result)): ?>
+                <h2>جميع المنتجات المتوفرة</h2>
+                <?php foreach($result as $res): ?>
+                    <div class="card" style="width: 300px;" >
+                        <img class="card-img-top" src="<?php echo "images/" .$res["product_image"] ?>" alt="Card image cap" class="img-fluid">
+                        <div class="card-body">
+                            <h5 class="card-title">Name Is : <?php echo $res["product_name"] ?></h5>
+                            <p class="card-text">Price Is : <?php echo $res["product_price"] ?></p>
+                            <a href="delete_product.php?product_id=<?php echo $res["product_id"] ?>" class="btn btn-danger">حذف منتج</a>
+                            <a href="update_product.php" class="btn btn-primary">تعديل منتج</a>
+                        </div>
                     </div>
-                </div>
-            <?php endforeach; ?>
-            
-        <?php endif; ?>
-
-
+                <?php endforeach; ?>
+            <?php endif; ?>
         </center>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

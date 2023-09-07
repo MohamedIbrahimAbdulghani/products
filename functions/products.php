@@ -20,3 +20,10 @@ function getProjects() {
     endwhile;
     return $projects;
 }
+
+// this is function to delete projects from database
+function deleteProject($product_id) {
+    global $connection_database;
+    $sql = "DELETE  FROM `product` WHERE `product_id` = '$product_id' ";
+    mysqli_query($connection_database, $sql);
+}
