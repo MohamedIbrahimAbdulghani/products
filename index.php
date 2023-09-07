@@ -1,7 +1,5 @@
 <?php
 
-
-
 ?>
 
 
@@ -20,21 +18,22 @@
 <body>
 
     <div class="container">
-        <form action="insert.php" method="POST" class="form border " enctype="multipart/form-data">
+        <form action="insert.php" method="POST" enctype="multipart/form-data" class="border form">
+            <?php if(!empty($errors)): ?>
+                <?php foreach($errors as $error): ?>
+                    <?php echo $error;die; ?>
+                <?php endforeach; ?>
+            <?php endif; ?>
             <h2>موقع تسويقي اونلاين</h2>
-            <img src="images/images.jpg" alt="logo" class="img-fluid">
+            <img src="images/images.jpg" alt="logo">
             <input type="text" name="name" class="form-control" placeholder="ادخل اسم المنتج">
             <input type="text" name="price" class="form-control" placeholder="ادخل سعر المنتج">
-            <input type="file" name="image" class="form-control">   
-            <div class="buttons">
-            <button name="upload" class="btn btn-success">رفع المنتج</button>
-            </div>
-            <a href="products.php">عرض كل المنتجات </a>
+            <input type="file" name="image" class="form-control">
+            <button class="btn btn-success upload" name="upload">رفع المنتج</button>
+            <a href="products.php">عرض كل المنتجات</a>
         </form>
     </div>
-    <div class="footer">
-        <h5>Developer By Mohamed Ibrahim</h5>
-    </div>
+        <footer>Developed By Mohamed Ibrahim</footer>
 
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
