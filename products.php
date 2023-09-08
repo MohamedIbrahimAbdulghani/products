@@ -2,7 +2,7 @@
     require_once "functions/products.php";
 
 
-    $result = getProjects();
+    $result = getProducts();
 
     if(empty($result)) {
         echo "<h2>جميع المنتجات المتوفرة</h2>";
@@ -35,7 +35,7 @@
                             <h5 class="card-title">Name Is : <?php echo $res["product_name"] ?></h5>
                             <p class="card-text">Price Is : <?php echo $res["product_price"] ?></p>
                             <a href="delete_product.php?product_id=<?php echo $res["product_id"] ?>" class="btn btn-danger">حذف منتج</a>
-                            <a href="update_product.php" class="btn btn-primary">تعديل منتج</a>
+                            <a href="update_product.php?product_id=<?php echo $res["product_id"] ?>" class="btn btn-primary">تعديل منتج</a>
                         </div>
                     </div>
                 <?php endforeach; ?>

@@ -12,7 +12,7 @@
         $image_location = $_FILES["image"]["tmp_name"];
         $new_image_location = "images/" . $image_name;
         if(!empty($product_name) && !empty($product_price) && !empty($image_name)):
-            addProjects($product_name, $product_price, $image_name);
+            addProducts($product_name, $product_price, $image_name);
             move_uploaded_file($image_location, $new_image_location);
             echo "<script>alert('تم رفع المنتج بنجاح')</script>";
             header("Refresh:1;url=index.php");

@@ -3,14 +3,14 @@
 require_once "db.php";
 
 // this is function to add project to database
-function addProjects($product_name, $product_price, $product_image) {
+function addProducts($product_name, $product_price, $product_image) {
     global $connection_database;
     $sql = "INSERT INTO `product` (`product_name`, `product_price`, `product_image`) VALUES ('$product_name', '$product_price', '$product_image') ";
     mysqli_query($connection_database, $sql);
 }
 
 // this is function to get projects from database
-function getProjects() {
+function getProducts() {
     global $connection_database;
     $sql = "SELECT * FROM `product` ";
     $result = mysqli_query($connection_database, $sql);
@@ -22,8 +22,13 @@ function getProjects() {
 }
 
 // this is function to delete projects from database
-function deleteProject($product_id) {
+function deleteProducts($product_id) {
     global $connection_database;
     $sql = "DELETE  FROM `product` WHERE `product_id` = '$product_id' ";
     mysqli_query($connection_database, $sql);
+}
+
+// this is function to update projects from database
+function updateProducts($product_id) {
+
 }

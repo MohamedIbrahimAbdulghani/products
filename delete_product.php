@@ -5,5 +5,5 @@ require_once "functions/products.php";
 
 $ID = $_GET["product_id"];
 
-$result = deleteProject($ID);
+$result = deleteProducts($ID);
 header("Location: products.php");
