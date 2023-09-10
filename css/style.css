@@ -44,14 +44,6 @@ body {
 .form a:hover {
     text-decoration: none;
 }
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    margin-bottom: 0px;
-    margin-top: 28px;
-    padding: 6px;
-}
 /* products page */
 h2 {
     text-align: center;

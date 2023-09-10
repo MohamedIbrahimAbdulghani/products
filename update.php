@@ -1,9 +1,10 @@
 <?php
 
+    require_once "db.php";
     require_once "functions/products.php";
 
 
-    if(isset($_POST["upload"])):
+    if(isset($_POST["update"])):
         $product_name = $_POST["name"];
         $product_price = $_POST["price"];
         $image = $_FILES["image"];

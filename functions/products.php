@@ -1,6 +1,7 @@
 <?php
 
 require_once "db.php";
+require_once "insert.php";
 
 // this is function to add project to database
 function addProducts($product_name, $product_price, $product_image) {
@@ -28,7 +29,21 @@ function deleteProducts($product_id) {
     mysqli_query($connection_database, $sql);
 }
 
+// this is function to get product by id from database
+function getProductById($id) {
+    global $connection_database;
+    $sql = "SELECT * FROM `product` WHERE `product_id` = '$id' ";
+    $result = mysqli_query($connection_database, $sql);
+    $projects = [];
+    while($res = mysqli_fetch_assoc($result)):
+        $projects[] = $res;
+    endwhile;
+    return $projects;
+
+}
+
 // this is function to update projects from database
 function updateProducts($product_id) {
-
+    global $connection_database;
+    
 }
