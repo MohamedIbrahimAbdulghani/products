@@ -25,13 +25,13 @@
 <body>
 
     <div class="container">
-        <form action="handlers/update.php" method="POST" enctype="multipart/form-data" class="border form">
+        <form action="update.php" method="POST" enctype="multipart/form-data" class="border form">
                     <h2>تعديل المنتج</h2>
                     <?php foreach($result as $res): ?>
                         <input type="text" name="id" class="form-control" placeholder="رقم  المنتج" value="<?php echo $res["product_id"] ?>">
                         <input type="text" name="name" class="form-control" placeholder="ادخل اسم المنتج" value="<?php echo $res["product_name"] ?>">
                         <input type="text" name="price" class="form-control" placeholder="ادخل سعر المنتج" value="<?php echo $res["product_price"] ?>">
-                        <input type="file" name="image" class="form-control">
+                        <input type="file" name="image" class="form-control" value="<?php echo $res["product_image"] ?>">
                         <button class="btn btn-success upload" name="update">تعديل المنتج</button>
                         <a href="products.php">عرض كل المنتجات</a>
                     <?php endforeach; ?>

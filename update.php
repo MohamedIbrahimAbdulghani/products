@@ -3,22 +3,21 @@
     require_once "db.php";
     require_once "functions/products.php";
 
-
     if(isset($_POST["update"])):
+        $product_id = $_POST["id"];
         $product_name = $_POST["name"];
         $product_price = $_POST["price"];
         $image = $_FILES["image"];
         $image_name = $_FILES["image"]["name"];
         $image_location = $_FILES["image"]["tmp_name"];
         $new_image_location = "images/" . $image_name;
-        if(!empty($product_name) && !empty($product_price) && !empty($image_name)):
-            addProducts($product_name, $product_price, $image_name);
-            move_uploaded_file($image_location, $new_image_location);
-            echo "<script>alert('تم رفع المنتج بنجاح')</script>";
-            header("Refresh:1;url=index.php");
+        if(!empty($product_name) && !empty($product_price)):
+            updateProducts($product_name, $product_price, $image_name, $product_id);
+            echo "<script>alert('تم تحديث المنتج بنجاح')</script>";
+            header("Refresh:1;url=products.php");
         else:
-            echo "<script>alert('لم يتم رفع المنتج بنجاح')</script>";
-            header("Refresh:1;url=index.php");
+            echo "<script>alert('لم يتم نحديث المنتج بنجاح')</script>";
+            header("Refresh:1;url=products.php");
         endif;
     endif;
 

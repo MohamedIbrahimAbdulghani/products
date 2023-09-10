@@ -43,7 +43,14 @@ function getProductById($id) {
 }
 
 // this is function to update projects from database
-function updateProducts($product_id) {
+function updateProducts($product_name, $product_price, $product_image, $product_id) {
     global $connection_database;
-    
+    $sql = "UPDATE `product` SET  `product_name` = '$product_name', `product_price` = '$product_price' ";
+    if(!empty($product_image)):
+        $sql .= " , `product_image` = '$product_image' ";
+    endif;  
+    $sql .= "  WHERE  `product_id` = '$product_id' ";
+    mysqli_query($connection_database, $sql);
+
+
 }
