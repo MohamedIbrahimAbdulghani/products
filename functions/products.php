@@ -39,7 +39,6 @@ function getProductById($id) {
         $projects[] = $res;
     endwhile;
     return $projects;
-
 }
 
 // this is function to update projects from database
@@ -51,6 +50,5 @@ function updateProducts($product_name, $product_price, $product_image, $product_
     endif;  
     $sql .= "  WHERE  `product_id` = '$product_id' ";
     mysqli_query($connection_database, $sql);
-
-
 }
+
