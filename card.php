@@ -42,10 +42,10 @@ if(empty($result)) {
                 </thead>
                 <tbody>
                     <!-- to make counter of cards -->
-                    <?php $x=1; ?>
+                    <?php $counter_number=1; ?>
                     <?php foreach($result as $res): ?>
                         <tr>
-                            <td><?php echo $x++ ; ?></td>
+                            <td><?php echo $counter_number++ ; ?></td>
                             <td><?php echo $res["card_name"] ?></td>
                             <td><?php echo $res["card_price"] ?></td>
                             <td><img src="<?php echo "images/".$res["card_image"] ?>" width="150px" height="150px"></td>
