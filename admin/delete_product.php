@@ -1,6 +1,6 @@
 <?php
 
-require_once "functions/products.php";
+require_once "../functions/products.php";
 
 
 $ID = $_GET["product_id"];

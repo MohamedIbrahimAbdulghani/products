@@ -4,11 +4,7 @@
 
     $result = getProducts();
 
-    if(empty($result)) {
-        echo "<h2>جميع المنتجات المتوفرة</h2>";
-        echo "<h2>Don't Found Any Project</h2>";
-        header("Refresh:1;url=index.php");
-    }
+
 ?>
 
 
@@ -28,6 +24,13 @@
     <nav class="navbar navbar-dark bg-dark">
         <a href="card.php" class="navbar-brand">عربتي | Mycard</a>
     </nav>
+    <?php
+        if(empty($result)) {
+            echo "<h2>جميع المنتجات المتوفرة</h2>";
+            echo "<h2>Don't Found Any Project</h2>";
+            header("Refresh:1;url=index.php");
+        }
+        ?>
         <center>
             <?php if(!empty($result)): ?>
                 <h2>جميع المنتجات المتوفرة</h2>

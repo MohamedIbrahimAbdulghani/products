@@ -1,5 +1,5 @@
 <?php
-    require_once "functions/products.php";
+    require_once "../functions/products.php";
 
 
     $result = getProducts();
@@ -7,7 +7,7 @@
     if(empty($result)) {
         echo "<h2>جميع المنتجات المتوفرة</h2>";
         echo "<h2>Don't Found Any Project</h2>";
-        header("Refresh:1;url=index.php");
+        header("Refresh:1;url=../index.php");
     }
 ?>
 
@@ -22,7 +22,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200&family=Roboto:ital,wght@1,100&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
         <center>
@@ -30,7 +30,7 @@
                 <h2> لوحة تحكم الادمن </h2>
                 <?php foreach($result as $res): ?>
                     <div class="card" style="width: 300px;" >
-                        <img class="card-img-top" src="<?php echo "images/" .$res["product_image"] ?>" alt="Card image cap" class="img-fluid">
+                        <img class="card-img-top" src="<?php echo "../images/" .$res["product_image"] ?>" alt="Card image cap" class="img-fluid">
                         <div class="card-body">
                             <h5 class="card-title">Name Is : <?php echo $res["product_name"] ?></h5>
                             <p class="card-text">Price Is : <?php echo $res["product_price"] ?></p>

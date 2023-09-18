@@ -1,6 +1,6 @@
 <?php
 
-    require_once "functions/products.php";
+    require_once "../functions/products.php";
 
 
     if(isset($_POST["upload"])):
@@ -9,15 +9,15 @@
         $image = $_FILES["image"];
         $image_name = $_FILES["image"]["name"];
         $image_location = $_FILES["image"]["tmp_name"];
-        $new_image_location = "images/" . $image_name;
+        $new_image_location = "../images/" . $image_name;
         if(!empty($product_name) && !empty($product_price) && !empty($image_name)):
             addProducts($product_name, $product_price, $image_name);
             move_uploaded_file($image_location, $new_image_location);
             echo "<script>alert('تم رفع المنتج بنجاح')</script>";
-            header("Refresh:1;url=index.php");
+            header("Refresh:1;url=../index.php");
         else:
             echo "<script>alert('لم يتم رفع المنتج بنجاح')</script>";
-            header("Refresh:1;url=index.php");
+            header("Refresh:1;url=../index.php");
         endif;
     endif;
 
@@ -33,7 +33,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200&family=Roboto:ital,wght@1,100&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
     

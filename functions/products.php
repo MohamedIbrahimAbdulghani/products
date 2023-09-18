@@ -1,7 +1,6 @@
 <?php
 
 require_once "db.php";
-require_once "insert.php";
 
 // this is function to add project to database
 function addProducts($product_name, $product_price, $product_image) {

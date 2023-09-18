@@ -18,7 +18,7 @@
 <body>
 
     <div class="container">
-        <form action="insert.php" method="POST" enctype="multipart/form-data" class="form border">
+        <form action="admin/insert.php" method="POST" enctype="multipart/form-data" class="form border">
             <?php if(!empty($errors)): ?>
                 <?php foreach($errors as $error): ?>
                     <?php echo $error;die; ?>
@@ -30,7 +30,7 @@
             <input type="text" name="price" class="form-control" placeholder="ادخل سعر المنتج">
             <input type="file" name="image" class="form-control">
             <button class="btn btn-success upload" name="upload">رفع المنتج</button>
-            <a href="products.php">عرض كل المنتجات</a>
+            <a href="admin/products.php">عرض كل المنتجات</a>
         </form>
     </div>
 
