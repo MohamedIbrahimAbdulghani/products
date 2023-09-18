@@ -22,13 +22,6 @@ function getProducts() {
     return $projects;
 }
 
-// this is function to delete projects from database
-function deleteProducts($product_id) {
-    global $connection_database;
-    $sql = "DELETE  FROM `product` WHERE `product_id` = '$product_id' ";
-    mysqli_query($connection_database, $sql);
-}
-
 // this is function to get product by id from database
 function getProductById($id) {
     global $connection_database;
@@ -41,6 +34,13 @@ function getProductById($id) {
     return $projects;
 }
 
+// this is function to delete projects from database
+function deleteProducts($product_id) {
+    global $connection_database;
+    $sql = "DELETE  FROM `product` WHERE `product_id` = '$product_id' ";
+    mysqli_query($connection_database, $sql);
+}
+
 // this is function to update projects from database
 function updateProducts($product_name, $product_price, $product_image, $product_id) {
     global $connection_database;
@@ -51,4 +51,3 @@ function updateProducts($product_name, $product_price, $product_image, $product_
     $sql .= "  WHERE  `product_id` = '$product_id' ";
     mysqli_query($connection_database, $sql);
 }
-
