@@ -11,6 +11,8 @@ body {
     margin-top: 15px !important;
     width: 75%;
     margin: auto;
+}
+.border {
     border: 1px solid #a9a9a9 !important;
 }
 .form h2 {
@@ -59,4 +61,7 @@ h2 {
     margin-top: 5px;
     width: 250px !important;
     height: 250px !important;
+}
+nav a.navbar-brand {
+    margin-left: 70px;
 }

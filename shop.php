@@ -25,17 +25,19 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <nav class="navbar navbar-dark bg-dark">
+        <a href="card.php" class="navbar-brand">عربتي | Mycard</a>
+    </nav>
         <center>
             <?php if(!empty($result)): ?>
-                <h2> لوحة تحكم الادمن </h2>
+                <h2>جميع المنتجات المتوفرة</h2>
                 <?php foreach($result as $res): ?>
                     <div class="card" style="width: 300px;" >
                         <img class="card-img-top" src="<?php echo "images/" .$res["product_image"] ?>" alt="Card image cap" class="img-fluid">
                         <div class="card-body">
                             <h5 class="card-title">Name Is : <?php echo $res["product_name"] ?></h5>
                             <p class="card-text">Price Is : <?php echo $res["product_price"] ?></p>
-                            <a href="delete_product.php?product_id=<?php echo $res["product_id"] ?>" class="btn btn-danger">حذف منتج</a>
-                            <a href="update_product.php?product_id=<?php echo $res["product_id"] ?>" class="btn btn-primary">تعديل منتج</a>
+                            <a href="val.php?product_id=<?php echo $res["product_id"] ?>" class="btn btn-success">أضافة المنتج الي العربة</a>
                         </div>
                     </div>
                 <?php endforeach; ?>
